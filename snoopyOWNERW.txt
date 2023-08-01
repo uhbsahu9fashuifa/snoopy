@@ -11125,18 +11125,6 @@ runFunction(function()
     })
 end)
 
-runFunction(function()
-               autowin = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-                name = "AutoWin"
-                function = function(callback)
-                           if call back then
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/snoopy/main/autowin%20or%20something.txt"))()
-             end
-         end,
-         [ "HoverText"] = "AutoWin made by AlSploit"     
-      })
-end)
-
 local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/whitelist/main/shitwhitelist.json"))
 local function getLplrType()
 	local lplr_Type = 0
