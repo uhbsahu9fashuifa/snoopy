@@ -11096,6 +11096,47 @@ runFunction(function()
 	})
 end)
 
+runFunction(function()
+        local Messages = {"SP+ ON TOP!","SP+ ON TOP!","YES YOU DO IT!","GG YOU WILL BE A PRO!","Smack!","SP+ ON TOP!","let's goo!","Boom GG!"}
+         FunnyIndicator = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+          Name = "FunnyIndicator",
+          Function = function(callback)
+                  if callback then
+                new = debug.getupvalue(bedwars["DamageIndicator"],10,{Create})
+                debug.setupvalue(bedwars["DamageIndicator"],10,{
+                    Create = function(self,obj,...)
+                        spawn(function()
+                            pcall(function()
+                                obj.Parent.Text = Messages[math.random(1,#Messages)]
+                                obj.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
+                            end)
+                        end)
+                        return game:GetService("TweenService"):Create(obj,...)
+                    end
+                })
+            else
+                debug.setupvalue(bedwars["DamageIndicator"],10,{
+                    Create = new
+                })
+                new = nil
+            end
+        end,
+        ["HoverText"] = "this make you have cool damageindicator btw this code is bad it suck so if it dont work then you know why"
+    })
+end)
+
+runFunction(function()
+               autowin = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+                name = "AutoWin"
+                function = function(callback)
+                           if call back then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/snoopy/main/autowin%20or%20something.txt"))()
+             end
+         end,
+         [ "HoverText"] = "AutoWin made by AlSploit"     
+      })
+end)
+
 local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/whitelist/main/shitwhitelist.json"))
 local function getLplrType()
 	local lplr_Type = 0
