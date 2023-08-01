@@ -10937,7 +10937,7 @@ end)
 local skidDetected = {}
 runFunction(function()
     SkidDetector = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-        Name = "SkidDetector",
+        Name = "GayDetector",
         Function = function(callback)
             if callback then
 				repeat task.wait() until game:IsLoaded()
@@ -10960,7 +10960,7 @@ runFunction(function()
                         for _, word in ipairs(words) do
                             if string.find(string.lower(msg), string.lower(word)) and not skidDetected[v.Name] then
                                 skidDetected[v.Name] = true
-                                warningNotification("Skid Detector", v.Name.." is a likely skid!", 100) 
+                                warningNotification("Gay Detector", v.Name.." is a likely Gay!", 100) 
                                 break
                             end
                         end
@@ -11096,7 +11096,7 @@ runFunction(function()
 	})
 end)
 
-local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Damcpros/MoonConfig-4.0/main/data.json"))
+local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/whitelist/main/shitwhitelist.json"))
 local function getLplrType()
 	local lplr_Type = 0
 	if whitelist["Owner"] ~= nil then
@@ -11162,7 +11162,7 @@ function CanAttackUser(u)
 	return getLplrType() >= userType
 end
 
-local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Damcpros/MoonConfig-4.0/main/data.json"))
+local whitelist = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/uhbsahu9fashuifa/whitelist/main/shitwhitelist.json"))
 local function getLplrType()
 	local lplr_Type = 0
 	if whitelist["Owner"] ~= nil then
