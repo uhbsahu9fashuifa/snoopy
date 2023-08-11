@@ -11283,7 +11283,6 @@ runFunction(function()
 end)
 
 runFunction(function()
-local DragonBreathFunny = {Enabled = false}
 DragonBreathFunny = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
 	Name = "DragonBreath",
 	Function = function(callback)
@@ -11291,7 +11290,6 @@ DragonBreathFunny = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOpt
 			task.spawn(function()	
 				repeat task.wait(0.3) 
 				replicatedStorageService:WaitForChild("rbxts_include"):WaitForChild("node_modules"):WaitForChild("@rbxts"):WaitForChild("net"):WaitForChild("out"):WaitForChild("_NetManaged"):WaitForChild("DragonBreath"):FireServer({player = lplr})
-				until (not DragonBreathFunny.Enabled)
 			end)
 		end
 	end
